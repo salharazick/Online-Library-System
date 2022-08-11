@@ -1,7 +1,7 @@
 
 <body id="footer">
 <div class="fixed-bottom">
-<footer class="bg-secondary text-center text-white">
+<footer class="bg-light text-center text-black">
   
 
   <!-- Copyright -->

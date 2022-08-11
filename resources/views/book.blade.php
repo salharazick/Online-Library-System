@@ -2,10 +2,15 @@
 
 @section("content")
    
+<head>
+<script src="https://use.fontawesome.com/b217068119.js"></script>
+</head>
 
   <div class="container book">
 
     <div class="row">
+
+    <a href="/Project/Online-Library-System/public/genre"><b><h5>Go Back</h5></b></a><br>
 
     @foreach($books as $item)
 

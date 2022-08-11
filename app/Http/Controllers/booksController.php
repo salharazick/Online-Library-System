@@ -8,11 +8,18 @@ use App\Models\book;
 use App\Models\borrow;
 use App\Models\shelf;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
-use function PHPSTORM_META\type;
 
 class booksController extends Controller
 {
+    function home()
+    {
+        $data = book::all();
+        return view('home')->with('home',$data);
+
+    }
+
     function genre()
     {
         $data = genre::all();
@@ -24,12 +31,12 @@ class booksController extends Controller
     {
         $data = book::all();
        // var_dump($data);
+       $data = book::paginate(10);
         return view('booklist')->with('books',$data);
     }
 
     function bookByGenre($id)
     {
-       
         
         $books = DB::table('books')
         ->join('genres','genres.id', '=', 'books.genre_ID')
@@ -133,19 +140,24 @@ class booksController extends Controller
             $borrow->save();
 
             shelf::where('user_id',$user_id)->delete();
-            return redirect('booklist');
+            
         }
-        
+
+        return redirect('booklist');
     }
     
     function myborrowals()
     {
         $user_id = session()->get('user')['id'];
 
-      $borrowals = DB::table('borrow')
+        
+        $borrowals = DB::table('borrow')
+        ->select('borrow.id','borrow.status','books.title','books.image')
         ->join('books','borrow.book_id','=','books.id')
         ->where('borrow.user_id',$user_id)
         ->get();
+
+      //  dd($borrowals);
 
         return view('myborrowals',['borrowals'=>$borrowals]);
 
@@ -157,9 +169,13 @@ class booksController extends Controller
         return borrow::where('user_id',$user_id)->count();
     }
 
-    function return($id)
+    
+    function returnBorrowal($id)
     {
-        borrow::destroy($id);
+       // dd($id);
+        $var = borrow::find($id);
+      //  dd($var);
+        borrow::find($id)->delete();
         return redirect('myborrowals');
     }
 

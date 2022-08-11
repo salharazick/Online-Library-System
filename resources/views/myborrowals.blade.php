@@ -2,10 +2,12 @@
 
 @section("content")
 
-<div class="custom-borrow">
+<div class="custom-myborrow">
 
 <div class="container">
-<h4></h4><br>
+<h4></h4>
+
+<a href="/Project/Online-Library-System/public/booklist">Go Back</a><br><br>
 
 @foreach($borrowals as $item)
 
@@ -16,8 +18,8 @@
     </div>
 
     <div class="col-sm-4">
-    <h3>Book : {{$item->title}}</h3>
-    <h5>Status : {{$item->status}}</h5>
+    <h5 style="color:darkblue;">Book : {{$item->title}}</h5>
+    <h6>Status : {{$item->status}}</h6>
 
     <a href="return/{{$item->id}}" class="btn btn-warning">Return</a>
     <br><br>

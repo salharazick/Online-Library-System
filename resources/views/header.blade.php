@@ -16,10 +16,13 @@ if(session()->has('user'))
 
 ?>
 
+<head>
+<script src="https://use.fontawesome.com/b217068119.js"></script>
+</head>
 
 <div class="fixed-top">
 
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +31,7 @@ if(session()->has('user'))
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="category">Home</a>
+          <a class="nav-link active" aria-current="page" href="home">Home</a>
         </li>
        
         <li class="nav-item">
@@ -52,7 +55,14 @@ if(session()->has('user'))
       
         @endif
 
-        
+        <li class="nav-item">
+          <a class="nav-link" href="booklist">Books
+            <i class="fa fa-book" style="color: black;"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="genre">Genre</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="shelflist">Shelf({{$total}})</a>
@@ -67,7 +77,7 @@ if(session()->has('user'))
       
       <form action="{{ route('search') }}" class="d-flex" role="search">
         <input class="form-control me-2 search-box" name="query" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
+        <button class="btn btn-danger" type="submit">Search</button>
       </form>
     </div>
   </div>

@@ -25,8 +25,10 @@ Route::get('logout', function () {
 
 
 Route::view('register','register');
+Route::view('home','home');
 Route::post('login',[userController::class,'login']);
 Route::post('register',[userController::class,'register']);
+Route::get('home',[booksController::class,'home']);
 Route::get('genre',[booksController::class,'genre']);
 Route::get('booklist',[booksController::class,'booklist']);
 Route::get('detail/{id}',[booksController::class,'detail']);
@@ -39,5 +41,5 @@ Route::get('removeshelf/{id}',[booksController::class,'removeshelf']);
 Route::get('borrow',[booksController::class,'borrow']);
 Route::post('borrowplace',[booksController::class,'borrowplace']);
 Route::get('myborrowals',[booksController::class,'myborrowals']);
-Route::get('return/{id}',[booksController::class,'return']);
+Route::get('return/{id}',[booksController::class,'returnBorrowal']);
 

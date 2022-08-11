@@ -2,16 +2,18 @@
 
 @section("content")
 
-<div class="container custom-product">
+<div class="container custom-borrow">
 <br><br>
-    <div class="col-sm-6">
+
+  <div class="row">
+    <div class="col-sm-4">
     <table class="table">
 
   <tbody>
     
     <tr>
-      <th scope="col"><h1>Number of Books</h1></th>
-      <td><h2>{{$count}}</h2></td>
+      <th scope="col"><h2 style="color:darkblue;">Number of Books: {{$count}}</h2></th>
+      
     </tr>
 
 </tbody>
@@ -24,14 +26,13 @@
     
     @csrf
 
-
-  
   <button type="submit" class="btn btn-danger">borrow</button>
     
 </form>
 
 </div>
 </div>
+  </div>
 </div>
 
    

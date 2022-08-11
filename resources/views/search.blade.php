@@ -3,7 +3,7 @@
 @section("content")
 
 
-<div class="custom-product">
+<div class="custom-search">
     <div class="col-sm-4">
         <a href="#">Filter</a>
     </div>

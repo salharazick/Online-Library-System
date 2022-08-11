@@ -13,14 +13,14 @@
 
         </div>
         <div class="col-sm-6">
-            
+        <a href="/Project/Online-Library-System/public/genre">Go Back</a><br>
            <p>
-            <h3>Title:{{$books->title}}</h3><br>
-            <h6>Author : {{$books->author}}</h6>
-            <h6>Genre : {{$books->genre}}</h6>
-            <h6>ISBN/BookID : {{$books->book_ID}}</h6>
-            <h6>Description : {{$books->description}}</h6>
-            <h5>Price :$.{{$books->price}}</h5>
+            <h3 style="color:lightseagreen;">{{$books->title}}</h3><br>
+            <h5>Author : {{$books->author}}</h5>
+            <h5>Genre : {{$books->genre}}</h5>
+            <h5>ISBN/BookID : {{$books->book_ID}}</h5>
+            <h6>Description : {{$books->description}}</h6><br><br>
+            <h5 style="color: red;">Price :$.{{$books->price}}</h5>
  
            </p>
 

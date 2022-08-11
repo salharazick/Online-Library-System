@@ -2,10 +2,10 @@
 
 @section("content")
 
-<div class="custom-product">
+<div class="custom-bookshelf">
 
 <div class="container">
-<h4>Your Bookshelf</h4><br>
+
 <a class="btn btn-success" href="borrow">Borrow</a>
 <br><br>
 @foreach($books as $item)

@@ -13,7 +13,7 @@
 <div class="card-body">
 
 
-        <form action="register" method="POST">
+        <form action="register" method="POST" name="register">
             @csrf
   <div class="mb-3">
     <label for="username" class="form-label">Username:</label>
@@ -39,6 +39,45 @@
 </div>
 </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+   <script>
+    $(document).ready(function () {
+    $('register').validate({ // initialize the plugin
+        rules: {
+            
+          username: "required",
+      
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true
+      },
+      password: {
+        required: true,
+        minlength: 5
+      }
+    },
+    // Specify validation error messages
+    messages: {
+     
+      username: "Please enter your username",
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long"
+      },
+      email: "Please enter a valid email address"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(register) {
+      form.submit();
+    }
+  });
+});
+</script>
 
 </body>
 
