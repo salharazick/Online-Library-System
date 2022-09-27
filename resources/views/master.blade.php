@@ -149,6 +149,20 @@
     padding-bottom: 80px;
     }
 
+.sellimg
+    {
+        height: 300px;
+    }
+
+    .best-selling
+    {
+        padding-bottom: 80px;
+    }    
+
+
+
+
+
     
 
 
