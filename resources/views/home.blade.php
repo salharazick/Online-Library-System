@@ -55,7 +55,40 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
-  
+  </div>
+
+<br>
+
+<h4 style="color: blue;">BEST SELLING</h4>
+<div class="best-selling">
+<div class="card mb-3">
+<div class="row">
+
+<div class="col-sm-3">
+<div class="card">
+  <img src="https://m.media-amazon.com/images/I/51rjrsluyLL.jpg" class="card-img-top sellimg">
+</div>
+</div>
+
+<div class="col-sm-3">
+<div class="card">
+  <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1622708128l/57346221.jpg" class="card-img-top sellimg">
+</div>
+</div>
+
+<div class="col-sm-3">
+<div class="card">
+  <img src="https://images.penguinrandomhouse.com/cover/9780593610015" class="card-img-top sellimg"> 
+</div>
+</div>
+
+<div class="col-sm-3">
+<div class="card">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/91oEeK2HYGL.jpg" class="card-img-top sellimg">
+</div>
+</div>
+
+</div>
 </div>
 </div>
 
